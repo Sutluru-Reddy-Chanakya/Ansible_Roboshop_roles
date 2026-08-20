@@ -1,8 +1,17 @@
 - name: roles deployment
   hosts: local
-  connection: localhost
+  connection: local
   roles:
     - demo
 
 
-    
+
+
+
+
+
+
+
+
+
+
