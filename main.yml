@@ -1,5 +1,5 @@
 - name: roles deployment
-  hosts: localhost
+  hosts: local
   connection: local
 
   roles:
