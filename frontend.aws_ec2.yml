@@ -9,5 +9,5 @@ hostnames:
 - private-ip-address
 filters:
   instance-state-name : running
-  tag:Name: dev
+  tag:Name: frontend
  
