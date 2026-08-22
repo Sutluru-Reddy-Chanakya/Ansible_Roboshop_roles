@@ -11,6 +11,8 @@ hostnames:
 filters:
   instance-state-name : running
   tag:Name: frontend
+compose:
+  ansible_hosts: private_ip_address
 keyed_groups:
 - prefix: ""
   key: frontend
