@@ -14,13 +14,13 @@ filters:
 compose:
   ansible_host: private_ip_address
 keyed_groups:
-- prefix: ""
+- separator: ""
   key: frontend
 
 
 
 
-  
+
 
 
 
