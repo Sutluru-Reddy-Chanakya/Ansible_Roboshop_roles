@@ -15,7 +15,7 @@ compose:
   ansible_hosts: private_ip_address
 keyed_groups:
 - prefix: ""
-  key: frontend-dev
+  key: frontend
 
 
 
