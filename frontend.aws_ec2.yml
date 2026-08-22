@@ -1,30 +1,15 @@
-# demo.aws_ec2.yml
 plugin: amazon.aws.aws_ec2
-
-# This sets the region. If empty (the default) default this will include all regions, except possibly
-# restricted ones like us-gov-west-1 and cn-north-1.
 regions:
 - us-east-1
 hostnames:
 - private-ip-address
-
 filters:
   instance-state-name : running
   tag:Name: frontend-dev
 compose:
+  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
   ansible_host: private_ip_address
 keyed_groups:
-- separator: ""
-  key: tags.component
-
-
-
-
-
-
-
-
-
-
-
- 
+- separator: ''
+  # name of the group is frontend
+  key: tags.Name | regex_replace('-.*$', '')
