@@ -1,1 +1,3 @@
-MTSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-2' , decrypt=True) }}"
+MTSQL_ROOT_PASSWORD: {{ lookup('amazon.aws.aws_secret', 'roboshop/dev/mysql_root_password', bypath=true) }}"
+
+#"{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-2' , decrypt=True) }}"
