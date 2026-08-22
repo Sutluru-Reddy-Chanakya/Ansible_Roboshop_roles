@@ -10,16 +10,16 @@ hostnames:
 
 filters:
   instance-state-name : running
-  tag:Name: frontend
+  tag:Name: frontend-dev
 compose:
   ansible_hosts: private_ip_address
 keyed_groups:
 - prefix: ""
-  key: frontend
+  key: frontend-dev
 
 
 
 
 
-  
+
  
